@@ -1,0 +1,247 @@
+/* Main Styles for Heisenberg Labs Website */
+
+/* Root variables */
+:root {
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8f9fa;
+    --bg-tertiary: #013a3a;
+    --bg-stats: #0891b2;
+    --text-primary: #000000;
+    --text-secondary: #6c757d;
+    --text-light: #ffffff;
+    --border-color: #dee2e6;
+    --shadow: rgba(0,0,0,0.1);
+    --hero-gradient: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+    --cta-gradient: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
+    --animation-duration: 0.3s;
+    --animation-timing: ease-in-out;
+}
+
+/* Global Animations and Transitions */
+* {
+    transition: background-color var(--animation-duration) var(--animation-timing),
+                color var(--animation-duration) var(--animation-timing),
+                border-color var(--animation-duration) var(--animation-timing),
+                transform var(--animation-duration) var(--animation-timing),
+                opacity var(--animation-duration) var(--animation-timing),
+                box-shadow var(--animation-duration) var(--animation-timing);
+}
+
+/* Page Load Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Scroll Animation Classes - Disabled to prevent content visibility issues */
+/*
+.animate-on-scroll {
+    opacity: 1;
+    transform: translateY(0);
+    transition: all 0.6s ease-out;
+}
+
+.animate-on-scroll.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-slide-left {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.6s ease-out;
+}
+
+.animate-slide-left.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-slide-right {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.6s ease-out;
+}
+
+.animate-slide-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-fade-in {
+    opacity: 1;
+    transition: opacity 0.6s ease-out;
+}
+
+.animate-fade-in.animate {
+    opacity: 1;
+}
+*/
+
+/* Hover Effects */
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px var(--shadow);
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+.hover-glow:hover {
+    box-shadow: 0 0 20px rgba(8, 145, 178, 0.3);
+}
+
+/* Button Animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Loading Animation */
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.loading {
+    animation: pulse 1.5s infinite;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 2.5rem;
+    }
+    .display-5 {
+        font-size: 2rem;
+    }
+    .display-6 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 2rem;
+    }
+    .display-5 {
+        font-size: 1.75rem;
+    }
+    .display-6 {
+        font-size: 1.5rem;
+    }
+}
+
+/* Hero Section Background */
+.hero-bg {
+    background: var(--hero-gradient);
+}
+
+/* Stats Section Background */
+.stats-bg {
+    background-color: var(--bg-stats);
+}
+
+/* Footer Background */
+.footer-bg {
+    background-color: var(--bg-tertiary);
+}
+
+/* Service Card Styles */
+.service-card {
+    transition: all 0.3s ease;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    color: var(--text-primary);
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px var(--shadow);
+}
+
+/* Feature Icon Styles */
+.feature-icon {
+    background-color: #cffafe;
+    color: #0891b2;
+}
+
+/* Process Step Styles */
+.process-step {
+    background-color: var(--bg-stats);
+    color: var(--text-light);
+}
+
+/* Contact Form Styles */
+.contact-form {
+    background: var(--bg-secondary);
+    border-radius: 10px;
+    color: var(--text-primary);
+}
+
+/* Navbar Brand Logo */
+.navbar-brand img {
+    height: 40px;
+}
+
+/* CTA Background */
+.cta-bg {
+    background: var(--cta-gradient);
+}
