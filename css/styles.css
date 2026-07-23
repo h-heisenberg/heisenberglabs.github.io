@@ -382,6 +382,12 @@ summary:focus-visible {
   font-weight: 800;
 }
 
+.stats-intro {
+  margin: 0 0 1.5rem;
+  font-weight: 600;
+  opacity: 0.95;
+}
+
 /* Cards */
 .card {
   background: var(--color-bg-alt);
@@ -721,12 +727,21 @@ th { font-weight: 700; }
   color: var(--color-text-muted);
 }
 
-/* TODO placeholder blocks (photos/testimonials not supplied yet) */
-.todo-block {
+/* Notice blocks: honest interim copy where content (e.g. photos) is still being gathered */
+.notice-block {
   border: 2px dashed var(--color-border);
   border-radius: var(--radius);
   padding: 2rem 1.25rem;
   text-align: center;
   color: var(--color-text-muted);
   background: var(--color-bg-alt);
+}
+
+/* Testimonials */
+.testimonial-card blockquote {
+  margin: 0 0 1rem;
+  font-size: 1.05rem;
+}
+.testimonial-card figcaption strong {
+  color: var(--color-text);
 }
