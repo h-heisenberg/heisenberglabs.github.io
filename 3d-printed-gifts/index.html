@@ -30,12 +30,63 @@
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "LocalBusiness",
+      "@id": "https://www.heisenberglabs.com.np/#business",
+      "name": "Heisenberg Labs",
+      "legalName": "Heisenberg Labs Pvt. Ltd.",
+      "description": "3D printing service in Kathmandu, Nepal offering architectural scale models, custom electronics enclosures, non-safety bike and car accessories, personalized 3D printed gifts, and 3D printing training workshops.",
+      "url": "https://www.heisenberglabs.com.np/",
+      "telephone": "+9779700045775",
+      "email": "heisenberglabs5@gmail.com",
+      "image": "https://www.heisenberglabs.com.np/assets/heisenberglabs-3d-printer-workshop.jpg",
+      "logo": "https://www.heisenberglabs.com.np/assets/heisenberglabs-logo.png",
+      "priceRange": "NPR 10–14 per gram of material (PLA/PETG); final price depends on print time, finishing, and quantity",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Makalu, Kalanki",
+        "addressLocality": "Kathmandu",
+        "addressRegion": "Bagmati Province",
+        "addressCountry": "NP"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 27.695889525997192,
+        "longitude": 85.27754607517072
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      "areaServed": ["Kathmandu", "Lalitpur", "Bhaktapur", "Nepal"],
+      "identifier": [
+        { "@type": "PropertyValue", "name": "OCR Registration No.", "value": "380779/82/83" },
+        { "@type": "PropertyValue", "name": "PAN", "value": "622500960" }
+      ],
+      "sameAs": [
+        "https://www.facebook.com/share/1HMCkbaymm/",
+        "https://www.instagram.com/heisenberglabs._/"
+      ]
+    },
+    {
       "@type": "Service",
       "serviceType": "Personalized 3D printed gifts",
-      "provider": { "@type": "LocalBusiness", "name": "Heisenberg Labs", "url": "https://www.heisenberglabs.com.np/" },
+      "provider": { "@id": "https://www.heisenberglabs.com.np/#business" },
       "areaServed": ["Kathmandu", "Lalitpur", "Bhaktapur", "Nepal"],
       "url": "https://www.heisenberglabs.com.np/3d-printed-gifts/",
-      "description": "Personalized 3D printed gifts in Kathmandu, Nepal — figurines, lithophane lamps, keychains, trophies, and corporate or festival gifting."
+      "description": "Personalized 3D printed gifts in Kathmandu, Nepal — figurines, lithophane lamps, keychains, trophies, and corporate or festival gifting.",
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Personalized gift types",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Lithophane lamps" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom keychains" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Figurines" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Trophies and plaques" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Corporate and festival bulk gifting" } }
+        ]
+      }
     },
     {
       "@type": "BreadcrumbList",
