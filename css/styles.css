@@ -1,24 +1,83 @@
 /* Heisenberg Labs — vanilla CSS design system (no framework, no external deps) */
 
+@font-face {
+  font-family: 'Plex Sans';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/PlexSans-400.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Plex Sans';
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/PlexSans-600.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Plex Mono';
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/PlexMono-500.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Plex Mono';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/PlexMono-700.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Archivo-700.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Archivo';
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+  src: url(/fonts/Archivo-800.woff2) format('woff2');
+}
+
 :root {
-  --color-bg: #ffffff;
-  --color-bg-alt: #f7f9fa;
-  --color-text: #1a1a1a;
-  --color-text-muted: #5b6570;
-  --color-border: #e2e6e9;
-  --color-primary: #0d9488;
-  --color-primary-dark: #0b7d73;
-  --color-accent: #0891b2;
-  --color-dark: #013a3a;
-  --color-success: #16a34a;
+  /* Color — cool-neutral "machined aluminum" ground, one bold accent (hotend orange) */
+  --color-bg: #f0f1ef;
+  --color-bg-alt: #e2e4e0;
+  --color-text: #1c1b1a;
+  --color-text-muted: #585a56;
+  --color-border: #d1d3ce;
+  --color-primary: #b8460a;
+  --color-primary-dark: #963a08;
+  --color-accent: #b8460a;
+  --color-dark: var(--color-text);
+  --color-success: #5b7d4f;
   --color-whatsapp: #25d366;
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
   --shadow-md: 0 6px 20px rgba(0, 0, 0, 0.08);
   --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.12);
-  --radius: 12px;
-  --radius-sm: 6px;
+  --radius: 4px;
+  --radius-sm: 2px;
   --container-width: 1140px;
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+
+  /* Type — Archivo (display), Plex Sans (body), Plex Mono (utility: labels/data) */
+  --font-display: 'Archivo', system-ui, sans-serif;
+  --font-body: 'Plex Sans', system-ui, sans-serif;
+  --font-mono: 'Plex Mono', 'SFMono-Regular', Consolas, monospace;
+
+  /* Spacing scale */
+  --sp-1: 0.25rem;
+  --sp-2: 0.5rem;
+  --sp-3: 0.75rem;
+  --sp-4: 1rem;
+  --sp-5: 1.5rem;
+  --sp-6: 2rem;
+  --sp-7: 3rem;
+  --sp-8: 4rem;
+
   --transition: 0.2s ease;
 }
 
@@ -32,7 +91,7 @@ html {
 
 body {
   margin: 0;
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   color: var(--color-text);
   background: var(--color-bg);
   line-height: 1.6;
@@ -55,14 +114,23 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  line-height: 1.25;
-  font-weight: 700;
+  font-family: var(--font-body);
+  line-height: 1.2;
+  font-weight: 600;
   margin: 0 0 1rem;
 }
 
-h1 { font-size: clamp(1.9rem, 4vw + 1rem, 3rem); }
-h2 { font-size: clamp(1.6rem, 3vw + 1rem, 2.25rem); }
-h3 { font-size: 1.25rem; }
+h1, h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.015em;
+  line-height: 1.1;
+  text-wrap: balance;
+}
+
+h1 { font-size: clamp(2rem, 4vw + 1rem, 3.2rem); }
+h2 { font-size: clamp(1.5rem, 3vw + 1rem, 2.1rem); }
+h3 { font-size: 1.2rem; font-weight: 600; }
 
 p { margin: 0 0 1rem; }
 
@@ -75,6 +143,17 @@ p { margin: 0 0 1rem; }
   overflow: hidden;
   clip: rect(0 0 0 0);
   white-space: nowrap;
+}
+
+/* Eyebrow / utility label — Plex Mono, the "G-code" register */
+.eyebrow {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  color: var(--color-primary-dark);
+  display: inline-block;
+  margin: 0 0 0.75rem;
 }
 
 /* Skip link */
@@ -165,6 +244,7 @@ summary:focus-visible {
   padding: 0.75rem 1.5rem;
   min-height: 44px;
   border-radius: var(--radius-sm);
+  font-family: var(--font-body);
   font-weight: 600;
   font-size: 1rem;
   border: 2px solid transparent;
@@ -340,9 +420,9 @@ summary:focus-visible {
   .navbar-cta .btn-primary.desktop-only { display: none; }
 }
 
-/* Hero */
+/* Hero — flat neutral ground, no gradient; asymmetric (left-aligned) on text-only heroes */
 .hero {
-  background: linear-gradient(135deg, #dbeafe 0%, #ffffff 100%);
+  background: var(--color-bg);
   padding: 3.5rem 0;
 }
 
@@ -358,18 +438,35 @@ summary:focus-visible {
 }
 
 .hero.simple {
-  text-align: center;
+  text-align: left;
+}
+
+.hero.simple .container {
+  max-width: 760px;
 }
 
 .hero.simple .lead {
-  max-width: 680px;
-  margin: 0 auto;
+  margin: 0 0 1.5rem;
 }
 
-/* Stats */
+.hero.simple .btn-group-row {
+  justify-content: flex-start;
+}
+
+/* Small signature flourish under an H1 — a static echo of the toolpath trace */
+.h1-flourish {
+  display: block;
+  margin: -0.25rem 0 1.25rem;
+}
+.h1-flourish path {
+  stroke: var(--color-accent);
+  fill: none;
+}
+
+/* Stats — quiet band; the accent stays reserved for the CTA band elsewhere on the page */
 .stats {
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-bg-alt);
+  color: var(--color-text);
   padding: 2.5rem 0;
 }
 
@@ -378,17 +475,22 @@ summary:focus-visible {
 }
 
 .stat-number {
-  font-size: 2rem;
+  font-family: var(--font-display);
   font-weight: 800;
+  font-size: 2rem;
 }
 
 .stats-intro {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  color: var(--color-primary-dark);
+  text-align: center;
   margin: 0 0 1.5rem;
-  font-weight: 600;
-  opacity: 0.95;
 }
 
-/* Cards */
+/* Cards — quiet by default; icons stay neutral so the accent isn't scattered everywhere */
 .card {
   background: var(--color-bg-alt);
   border-radius: var(--radius);
@@ -407,8 +509,8 @@ summary:focus-visible {
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  background: rgba(13, 148, 136, 0.1);
-  color: var(--color-primary);
+  background: #fff;
+  color: var(--color-text);
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -441,19 +543,52 @@ summary:focus-visible {
   margin-top: 0.2rem;
 }
 
-/* CTA band */
+/* CTA band — the one bold, dark zone per page. Flat ink ground, hotend-orange toolpath trace. */
 .cta-band {
-  background: linear-gradient(135deg, #0d9488 0%, #0891b2 100%);
-  color: #fff;
+  background: var(--color-dark);
+  color: #f2f0ec;
   padding: 3.5rem 0;
   text-align: center;
+  position: relative;
+  overflow: hidden;
 }
-.cta-band .lead { color: rgba(255,255,255,0.9); max-width: 640px; margin: 0 auto 1.75rem; }
+.cta-band .container { position: relative; z-index: 2; }
+.cta-band .lead { color: rgba(242,240,236,0.82); max-width: 640px; margin: 0 auto 1.75rem; }
 
-/* Breadcrumbs */
+.cta-trace {
+  position: absolute;
+  top: 0;
+  right: -10%;
+  height: 100%;
+  width: 60%;
+  opacity: 0.35;
+  pointer-events: none;
+  z-index: 1;
+}
+.js .cta-trace .trace-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  transition: stroke-dashoffset 1.6s ease 0.15s;
+}
+.cta-trace.is-visible .trace-line {
+  stroke-dashoffset: 0;
+}
+.cta-trace .trace-line {
+  stroke: var(--color-accent);
+  stroke-width: 3;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+@media (max-width: 767px) {
+  .cta-trace { width: 90%; right: -20%; opacity: 0.22; }
+}
+
+/* Breadcrumbs — Plex Mono, the small "coordinate readout" register */
 .breadcrumbs {
   padding: 1rem 0;
-  font-size: 0.9rem;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
 }
 .breadcrumbs ol {
   list-style: none;
@@ -501,7 +636,7 @@ summary:focus-visible {
   color: var(--color-text-muted);
 }
 
-/* Table */
+/* Table — Plex Mono for headers and figures, so specs/pricing read as data */
 .table-wrap { overflow-x: auto; }
 table {
   width: 100%;
@@ -512,8 +647,17 @@ th, td {
   text-align: left;
   padding: 0.65rem 0.75rem;
   border-bottom: 1px solid var(--color-border);
+  font-variant-numeric: tabular-nums;
 }
-th { font-weight: 700; }
+th {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+td { font-family: var(--font-mono); font-size: 0.92rem; }
 
 /* Forms */
 .form-field {
