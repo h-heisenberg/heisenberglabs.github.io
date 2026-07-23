@@ -4,6 +4,8 @@
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" href="/fonts/PlexSans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Archivo-800.woff2" as="font" type="font/woff2" crossorigin>
 <title>3D Printing Service in Kathmandu, Nepal | Heisenberg Labs</title>
 <meta name="description" content="3D printing service in Kathmandu, Nepal — architectural models, electronics enclosures, bike & car accessories, and personalized gifts. Get a WhatsApp quote.">
 <link rel="canonical" href="https://www.heisenberglabs.com.np/">
@@ -150,8 +152,17 @@
       </div>
       <div class="reveal">
         <picture>
-          <source srcset="/assets/heisenberglabs-3d-printer-workshop.webp" type="image/webp">
-          <img src="/assets/heisenberglabs-3d-printer-workshop.jpg" width="800" height="1418" alt="3D printer producing a part at the Heisenberg Labs workshop in Kathmandu" loading="eager">
+          <source type="image/webp"
+            srcset="/assets/heisenberglabs-3d-printer-workshop-400.webp 400w,
+                    /assets/heisenberglabs-3d-printer-workshop-600.webp 600w,
+                    /assets/heisenberglabs-3d-printer-workshop.webp 800w"
+            sizes="(max-width: 1023px) 90vw, 500px">
+          <img src="/assets/heisenberglabs-3d-printer-workshop.jpg"
+            srcset="/assets/heisenberglabs-3d-printer-workshop-400.jpg 400w,
+                    /assets/heisenberglabs-3d-printer-workshop-600.jpg 600w,
+                    /assets/heisenberglabs-3d-printer-workshop.jpg 800w"
+            sizes="(max-width: 1023px) 90vw, 500px"
+            width="800" height="1418" alt="3D printer producing a part at the Heisenberg Labs workshop in Kathmandu" loading="eager">
         </picture>
       </div>
     </div>
@@ -335,7 +346,7 @@
         </div>
       </div>
       <div>
-        <h5>Quick Links</h5>
+        <h3>Quick Links</h3>
         <ul>
           <li><a href="/about.html">About Us</a></li>
           <li><a href="/services.html">Our Services</a></li>
@@ -345,7 +356,7 @@
         </ul>
       </div>
       <div>
-        <h5>Services</h5>
+        <h3>Services</h3>
         <ul>
           <li><a href="/architectural-models/">Architectural Models</a></li>
           <li><a href="/electronics-enclosures/">Electronics Enclosures</a></li>
@@ -355,7 +366,7 @@
         </ul>
       </div>
       <div>
-        <h5>Contact</h5>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+9779700045775">+977 9700045775</a></li>
           <li><a href="mailto:heisenberglabs5@gmail.com">heisenberglabs5@gmail.com</a></li>

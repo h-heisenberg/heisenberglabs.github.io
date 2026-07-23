@@ -298,9 +298,9 @@ summary:focus-visible {
 
 .btn-whatsapp {
   background: var(--color-whatsapp);
-  color: #fff;
+  color: var(--color-text);
 }
-.btn-whatsapp:hover { background: #1ebe5a; color: #fff; box-shadow: var(--shadow-md); }
+.btn-whatsapp:hover { background: #1ebe5a; color: var(--color-text); box-shadow: var(--shadow-md); }
 
 .btn-group-row {
   display: flex;
@@ -721,9 +721,10 @@ td { font-family: var(--font-mono); font-size: 0.92rem; }
 @media (max-width: 560px) {
   .footer-grid { grid-template-columns: 1fr; }
 }
-.site-footer h5 {
+.site-footer h3 {
   color: #fff;
   font-size: 1rem;
+  font-weight: 600;
   margin-bottom: 1rem;
 }
 .site-footer ul {
@@ -793,7 +794,7 @@ td { font-family: var(--font-mono); font-size: 0.92rem; }
   height: 60px;
   border-radius: 50%;
   background: var(--color-whatsapp);
-  color: #fff;
+  color: var(--color-text);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -829,7 +830,7 @@ td { font-family: var(--font-mono); font-size: 0.92rem; }
   color: #fff;
 }
 .mobile-action-bar .call-action { background: var(--color-dark); }
-.mobile-action-bar .whatsapp-action { background: var(--color-whatsapp); }
+.mobile-action-bar .whatsapp-action { background: var(--color-whatsapp); color: var(--color-text); }
 
 @media (max-width: 767px) {
   .mobile-action-bar { display: block; }
