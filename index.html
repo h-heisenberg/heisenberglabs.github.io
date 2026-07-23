@@ -4,8 +4,10 @@
 <script>document.documentElement.classList.add("js");</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preload" href="/fonts/PlexSans-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/Archivo-800.woff2" as="font" type="font/woff2" crossorigin>
 <title>3D Printing Service in Kathmandu, Nepal | Heisenberg Labs</title>
-<meta name="description" content="Heisenberg Labs is a 3D printing service in Kathmandu, Nepal for architectural models, electronics enclosures, bike & car accessories, and custom gifts. Get a WhatsApp quote today.">
+<meta name="description" content="3D printing service in Kathmandu, Nepal — architectural models, electronics enclosures, bike & car accessories, and personalized gifts. Get a WhatsApp quote.">
 <link rel="canonical" href="https://www.heisenberglabs.com.np/">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -14,13 +16,16 @@
 <link rel="manifest" href="/site.webmanifest">
 <link rel="stylesheet" href="/css/styles.css">
 <script src="/js/animations.js" defer></script>
+<script src="/js/marquee.js" defer></script>
 
 <meta property="og:title" content="3D Printing Service in Kathmandu, Nepal | Heisenberg Labs">
 <meta property="og:description" content="Architectural models, electronics enclosures, bike & car accessories, and custom 3D printed gifts — made in Kathmandu, delivered across Nepal.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://www.heisenberglabs.com.np/">
 <meta property="og:site_name" content="Heisenberg Labs">
-<meta property="og:image" content="https://www.heisenberglabs.com.np/assets/heisenberglabs-logo.png">
+<meta property="og:image" content="https://www.heisenberglabs.com.np/assets/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="3D Printing Service in Kathmandu, Nepal | Heisenberg Labs">
 <meta name="twitter:description" content="Architectural models, electronics enclosures, bike & car accessories, and custom 3D printed gifts — made in Kathmandu, delivered across Nepal.">
@@ -33,11 +38,14 @@
       "@type": "LocalBusiness",
       "@id": "https://www.heisenberglabs.com.np/#business",
       "name": "Heisenberg Labs",
+      "legalName": "Heisenberg Labs Pvt. Ltd.",
       "description": "3D printing service in Kathmandu, Nepal offering architectural scale models, custom electronics enclosures, non-safety bike and car accessories, personalized 3D printed gifts, and 3D printing training workshops.",
       "url": "https://www.heisenberglabs.com.np/",
       "telephone": "+9779700045775",
       "email": "heisenberglabs5@gmail.com",
-      "image": "https://www.heisenberglabs.com.np/assets/heisenberglabs-logo.png",
+      "image": "https://www.heisenberglabs.com.np/assets/heisenberglabs-3d-printer-workshop.jpg",
+      "logo": "https://www.heisenberglabs.com.np/assets/heisenberglabs-logo.png",
+      "priceRange": "NPR 10–14 per gram of material (PLA/PETG); final price depends on print time, finishing, and quantity",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Makalu, Kalanki",
@@ -57,6 +65,10 @@
         "closes": "19:00"
       },
       "areaServed": ["Kathmandu", "Lalitpur", "Bhaktapur", "Nepal"],
+      "identifier": [
+        { "@type": "PropertyValue", "name": "OCR Registration No.", "value": "380779/82/83" },
+        { "@type": "PropertyValue", "name": "PAN", "value": "622500960" }
+      ],
       "sameAs": [
         "https://www.facebook.com/share/1HMCkbaymm/",
         "https://www.instagram.com/heisenberglabs._/"
@@ -123,6 +135,7 @@
     <div class="container hero-inner">
       <div class="reveal">
         <h1>Professional 3D Printing Services in Kathmandu, Nepal</h1>
+        <svg class="h1-flourish" width="200" height="18" viewBox="0 0 200 18" aria-hidden="true" focusable="false"><path d="M3 12 C 26 3, 48 3, 64 11 C 80 18, 102 18, 118 9 C 134 1, 156 1, 175 9" stroke-width="2.5" stroke-linecap="round"/></svg>
         <p class="lead">
           Heisenberg Labs designs and prints architectural scale models, custom electronics enclosures,
           bike &amp; car accessories, and personalized gifts for customers across Kathmandu, Lalitpur, Bhaktapur,
@@ -139,8 +152,17 @@
       </div>
       <div class="reveal">
         <picture>
-          <source srcset="/assets/heisenberglabs-3d-printer-workshop.webp" type="image/webp">
-          <img src="/assets/heisenberglabs-3d-printer-workshop.jpg" width="800" height="1418" alt="3D printer producing a part at the Heisenberg Labs workshop in Kathmandu" loading="eager">
+          <source type="image/webp"
+            srcset="/assets/heisenberglabs-3d-printer-workshop-400.webp 400w,
+                    /assets/heisenberglabs-3d-printer-workshop-600.webp 600w,
+                    /assets/heisenberglabs-3d-printer-workshop.webp 800w"
+            sizes="(max-width: 1023px) 90vw, 500px">
+          <img src="/assets/heisenberglabs-3d-printer-workshop.jpg"
+            srcset="/assets/heisenberglabs-3d-printer-workshop-400.jpg 400w,
+                    /assets/heisenberglabs-3d-printer-workshop-600.jpg 600w,
+                    /assets/heisenberglabs-3d-printer-workshop.jpg 800w"
+            sizes="(max-width: 1023px) 90vw, 500px"
+            width="800" height="1418" alt="3D printer producing a part at the Heisenberg Labs workshop in Kathmandu" loading="eager">
         </picture>
       </div>
     </div>
@@ -207,19 +229,19 @@
 
   <section class="stats">
     <div class="container">
-      <!-- TODO: replace placeholder stats below with real, confirmed figures -->
+      <p class="stats-intro text-center">Trusted by businesses and automotive workshops across Kathmandu Valley.</p>
       <div class="grid grid-4">
         <div class="reveal">
-          <div class="stat-number">TODO</div>
-          <div>Projects delivered</div>
+          <div class="stat-number">200+</div>
+          <div>Projects delivered — custom, professional &amp; B2B</div>
         </div>
         <div class="reveal">
           <div class="stat-number">PLA / PETG</div>
           <div>Core print materials</div>
         </div>
         <div class="reveal">
-          <div class="stat-number">TODO</div>
-          <div>Typical turnaround</div>
+          <div class="stat-number">24-Hour</div>
+          <div>Typical turnaround for standard orders</div>
         </div>
         <div class="reveal">
           <div class="stat-number">3</div>
@@ -262,14 +284,19 @@
 
   <section class="section section-alt">
     <div class="container">
-      <div class="todo-block reveal">
-        <h3>Project Gallery — Coming Soon</h3>
-        <p>TODO: real photos of completed architectural models, enclosures, accessories, and gifts will go here.</p>
+      <div class="section-header">
+        <h2>Project Gallery</h2>
+      </div>
+      <div data-marquee-mount>
+        <div class="notice-block reveal">
+          <p>We're building a photo library of completed architectural models, enclosures, accessories, and gifts. See the kinds of projects we take on in our <a href="/portfolio.html">portfolio</a>, or <a href="https://wa.me/9779700045775?text=Hi%20Heisenberg%20Labs%2C%20I%27d%20like%20to%20see%20examples%20of%20past%20work." rel="noopener">ask us on WhatsApp</a> for examples similar to your project.</p>
+        </div>
       </div>
     </div>
   </section>
 
   <section class="cta-band">
+    <svg class="cta-trace reveal" viewBox="0 0 400 300" preserveAspectRatio="xMidYMid slice" aria-hidden="true" focusable="false"><path class="trace-line" d="M30,250 C15,210 15,140 55,105 C95,70 85,35 135,25 C185,15 250,20 285,50 C320,80 325,130 300,165 C275,200 285,240 245,255 C205,270 80,270 30,250 Z"/></svg>
     <div class="container">
       <h2>Have a 3D Printing Project in Mind?</h2>
       <p class="lead">Send us your idea, sketch, or 3D file on WhatsApp and we'll reply with a quote.</p>
@@ -319,7 +346,7 @@
         </div>
       </div>
       <div>
-        <h5>Quick Links</h5>
+        <h3>Quick Links</h3>
         <ul>
           <li><a href="/about.html">About Us</a></li>
           <li><a href="/services.html">Our Services</a></li>
@@ -329,7 +356,7 @@
         </ul>
       </div>
       <div>
-        <h5>Services</h5>
+        <h3>Services</h3>
         <ul>
           <li><a href="/architectural-models/">Architectural Models</a></li>
           <li><a href="/electronics-enclosures/">Electronics Enclosures</a></li>
@@ -339,7 +366,7 @@
         </ul>
       </div>
       <div>
-        <h5>Contact</h5>
+        <h3>Contact</h3>
         <ul>
           <li><a href="tel:+9779700045775">+977 9700045775</a></li>
           <li><a href="mailto:heisenberglabs5@gmail.com">heisenberglabs5@gmail.com</a></li>

@@ -1,0 +1,89 @@
+[
+  {
+    "id": "led-candle-lamp",
+    "jpg": "/assets/portfolio/led-candle-lamp.jpg",
+    "webp": "/assets/portfolio/led-candle-lamp.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "3D printed decorative lamp with a textured spherical shade and a glowing LED candle insert",
+    "caption": "Decorative LED Candle Lamp",
+    "note": "Textured shade with a glowing candle-style insert",
+    "service": "/3d-printed-gifts/"
+  },
+  {
+    "id": "lr-coin-holder-repair",
+    "jpg": "/assets/portfolio/lr-coin-holder-repair.jpg",
+    "webp": "/assets/portfolio/lr-coin-holder-repair.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "3D printed replacement coin holder and button housing for a Land Rover interior, shown next to the original broken part",
+    "caption": "Land Rover Coin Holder & Button Housing",
+    "note": "Reverse-engineered replacement for a broken original",
+    "service": "/bike-accessories/"
+  },
+  {
+    "id": "ar15-prop-replica",
+    "jpg": "/assets/portfolio/ar15-prop-replica.jpg",
+    "webp": "/assets/portfolio/ar15-prop-replica.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "3D printed AR-15-style prop replica in teal and green, a non-functional display and cosplay build",
+    "caption": "AR-15-Style Prop Replica",
+    "note": "Non-functional cosplay/display build"
+  },
+  {
+    "id": "kaaba-masjid-al-haram-model",
+    "jpg": "/assets/portfolio/kaaba-masjid-al-haram-model.jpg",
+    "webp": "/assets/portfolio/kaaba-masjid-al-haram-model.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "3D printed scale model of the Kaaba and the Masjid al-Haram courtyard",
+    "caption": "Kaaba & Masjid al-Haram Scale Model",
+    "note": "Multi-part architectural model",
+    "service": "/architectural-models/"
+  },
+  {
+    "id": "land-rover-badge",
+    "jpg": "/assets/portfolio/land-rover-badge.jpg",
+    "webp": "/assets/portfolio/land-rover-badge.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "3D printed replica Land Rover badge emblem held in hand",
+    "caption": "Land Rover Badge",
+    "note": "Custom replica emblem",
+    "service": "/bike-accessories/"
+  },
+  {
+    "id": "snow-leopard-figurine",
+    "jpg": "/assets/portfolio/snow-leopard-figurine.jpg",
+    "webp": "/assets/portfolio/snow-leopard-figurine.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "Hand-painted 3D printed figurine of a snow leopard character in red and green robes, holding a staff and bowl",
+    "caption": "Painted Snow Leopard Figurine",
+    "note": "Hand-painted after printing",
+    "service": "/3d-printed-gifts/"
+  },
+  {
+    "id": "wireframe-horse-figurine",
+    "jpg": "/assets/portfolio/wireframe-horse-figurine.jpg",
+    "webp": "/assets/portfolio/wireframe-horse-figurine.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "3D printed horse figurine with a flowing, wireframe-style mane and tail, unpainted white finish",
+    "caption": "Wireframe Horse Figurine",
+    "note": "Fine detail, unpainted finish",
+    "service": "/3d-printed-gifts/"
+  },
+  {
+    "id": "mount-bracket-oval",
+    "jpg": "/assets/portfolio/mount-bracket-oval.jpg",
+    "webp": "/assets/portfolio/mount-bracket-oval.webp",
+    "width": 800,
+    "height": 600,
+    "alt": "Small 3D printed oval mounting bracket with two screw holes",
+    "caption": "Custom Mount Bracket",
+    "note": "Small functional mounting bracket",
+    "service": "/electronics-enclosures/"
+  }
+]
